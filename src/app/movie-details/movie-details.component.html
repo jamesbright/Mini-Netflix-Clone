@@ -1,0 +1,31 @@
+
+<div class="container-fluid">
+    <div *ngIf="movie" class="wrapper">
+        <div class="row">
+            <div  class="col-sm-6 col-md-6 data-div">
+           <span class="N"><img src="../assets/images/N_black.png" alt="N"  class="N"/></span> <span class="intro">presents</span>
+                <div class="">
+                    <div class="title">
+                        <h1 >{{movie.title | uppercase}}</h1>
+                        </div>
+                        <div class="movie-description">
+                    {{movie.overview}}
+                    </div>
+                    <div class="movie-interact">
+                    <a class="movie-interact-button" href="#"><span class="glyphicon glyphicon-plus"></span> My List</a>
+                    <a class="movie-interact-button" href="#"><span class="glyphicon glyphicon-info-sign"></span> More Info</a>
+                </div>
+            </div>
+            </div>
+      
+
+            <div class="col-sm-6 col-md-6 data-div">
+                <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="poster"
+                    class="img img-responsive img-detail" />
+              
+            </div>
+    </div>
+</div>
+</div>
+
+<app-similar-movies [genre] ="genre"></app-similar-movies>

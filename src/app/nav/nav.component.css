@@ -1,0 +1,36 @@
+ .navbar-inner {
+    border-width: 0px;
+    -webkit-box-shadow: 0px 0px !important;
+    box-shadow: 0px 0px;
+    background-color: rgba(0,0,0,0.0);
+    background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00))) !important;
+    background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%) !important;
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%) !important;
+ 
+}
+.navbar-inner a{
+    font-size: 20px;
+      color:navajowhite !important;
+}
+
+.navbar-inner  a:hover{
+ padding: .5rem;
+      color:rgb(253, 254, 255) !important;
+      background: none;
+}
+
+.logo{
+   height: 80px;
+}
+.logo-link{
+padding-top:0px;
+
+}
+#search-text, #search-button{
+    background:none;
+    border:none;
+}
+
+.icon-bar{
+ background: navajowhite !important;
+}

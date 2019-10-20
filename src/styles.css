@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background:rgb(22, 3, 3);
+}
+
+
+.wrapper{
+    padding-top:40px;
+    padding-bottom:30px;
+}
+.movie-list-descrip{
+  background:navajowhite;
+  width:100%;
+  color:rgb(22, 3, 3);
+}
+a:hover{
+    text-decoration:none;
+}
+.loading{
+    margin-top:25%;
+    margin-left:45%;
+    z-index: 100;
+}
