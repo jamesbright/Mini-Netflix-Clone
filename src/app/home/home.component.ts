@@ -12,7 +12,7 @@ import { ActivatedRoute } from "@angular/router";
 export class HomeComponent implements OnInit {
   searchTerm$ = new Subject<string>();
   movies;
-  routTo:string;
+  routTo: string;
   constructor(
     private movieService: MovieService, public route: ActivatedRoute
   ) {
@@ -24,10 +24,10 @@ export class HomeComponent implements OnInit {
       },
         err => console.log(err),
         () => console.log(this.movies)
-    
-      
-    );
-   }
+
+
+      );
+  }
 
   getMovies() {
     this.movieService.getMovies().subscribe(
@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit {
       () => console.log(`success`)
     );
   }
-  
+
 
   getPopular() {
     this.movieService.getPopular().subscribe(
@@ -81,7 +81,6 @@ export class HomeComponent implements OnInit {
     // get routes
     this.route.url.subscribe(params => {
       this.routTo = params[0].path;
-      console.log(`params ${this.routTo}`);
 
       switch (this.routTo) {
         case 'shows':
