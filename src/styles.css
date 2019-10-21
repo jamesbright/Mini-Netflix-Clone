@@ -8,11 +8,6 @@ body {
     padding-top:40px;
     padding-bottom:30px;
 }
-.movie-list-descrip{
-  background:navajowhite;
-  width:100%;
-  color:rgb(22, 3, 3);
-}
 a:hover{
     text-decoration:none;
 }
