@@ -1,6 +1,6 @@
 # ALC4.0-ng-mini-netflix
 
-https://mini-flix.netflix.com
+https://mini-flix.netlify.com
 
 > ALC4.0 mini netflix challenge app
 
