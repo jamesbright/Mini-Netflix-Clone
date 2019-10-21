@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'detail/:id', component: MovieDetailsComponent },
   { path: '', component: HomeComponent },
   { path: 'favourites', component: FavMoviesComponent },
-  { path: 'upcoming', component: HomeComponent},
+  { path: 'upcoming', component: HomeComponent },
   { path: 'popular', component: HomeComponent },
   { path: 'shows', component: HomeComponent }
 ];
