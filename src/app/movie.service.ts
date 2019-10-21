@@ -11,7 +11,7 @@ import 'rxjs/add/operator/switchMap';
 })
 export class MovieService {
   API_KEY = '362f309ced9506f3b5c1f401d7bb73fb';
-  queryUrl: string = '?search=';
+  
 
   constructor(private http: HttpClient) { }
 

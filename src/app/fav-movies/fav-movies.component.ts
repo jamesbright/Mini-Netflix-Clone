@@ -15,9 +15,12 @@ export class FavMoviesComponent implements OnInit {
     private localStorageService: LocalStorageService,
     private movieService: MovieService) { }
 
+
+  //compile list of movies from local storage
   getMyList() {
     this.favourites = this.localStorageService.getFromLocalStorage();
-    console.log(this.favourites);
+
+    //iterate through the array and push each value at index is to movies[]
     this.favourites.forEach(id => {
       this.movieService.getMovie(id).subscribe(
         data => {
@@ -28,10 +31,12 @@ export class FavMoviesComponent implements OnInit {
       );
     });
   }
+
   removeFromFavourites(id: number) {
     this.localStorageService.removeFromLocalStorage(id);
     location.reload();
   }
+
   clearFavourites() {
     this.localStorageService.clearFavourites();
   }

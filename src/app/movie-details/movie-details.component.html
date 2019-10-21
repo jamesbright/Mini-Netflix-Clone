@@ -16,6 +16,7 @@
                                 class="glyphicon glyphicon-plus"></span> My List</button>
                         <button class="movie-interact-button" (click)="moreInfo($event)"><span
                                 class="glyphicon glyphicon-info-sign"></span> More Info</button>
+                                <p *ngIf="addedToFavourites">Added to favourites</p>
                     </div>
                 </div>
                 <div   *ngIf="showMore" class="more-details">

@@ -13,6 +13,8 @@ export class MovieDetailsComponent implements OnInit {
   public movie;
   public genre;
   public showMore : boolean = false;
+  public addedToFavourites: boolean = false;
+
   constructor(
     private route: ActivatedRoute,
     private movieService: MovieService,
@@ -50,6 +52,7 @@ export class MovieDetailsComponent implements OnInit {
 
   addToFavourites(event, movieId) {
     this.localStorageService.storeOnLocalStorage(movieId);
+    this.addedToFavourites = true;
   }
 
 moreInfo(event) {
