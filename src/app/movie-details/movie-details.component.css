@@ -28,8 +28,6 @@
 .movie-description{
     color: rgb(243, 233, 233);
     font-size:18px;
-    margin-top:15px;
-    text-align: justify;
 }
 .movie-interact{
     text-align: center;
@@ -40,13 +38,52 @@
     background: rgb(71, 64, 64);
     color: rgb(230, 224, 217);
        padding: 5px 10px 5px 10px;
+       border:none;
 }
 
 .data-div{
     margin-top:10px;
-
 }
 .wrapper
 {
     margin-top:20px;
+}
+.wrapper .similar-movies{
+    text-align-last: center;
+    color:navajowhite;
+}
+
+
+
+@media only screen and (min-width: 456px) {
+.centered-title {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: bolder;
+  color: rgb(238, 18, 37);
+}
+}
+@media only screen and (min-width: 1024px) {
+.movie-similar{
+    height:250px;
+}
+
+
+.centered-title {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: bolder;
+  color: rgb(238, 18, 37);
+}
+}
+
+
+.movie-list-descrip{
+    text-align:center;
 }

@@ -15,10 +15,7 @@
 text-align: center;
 padding-left: 40px;
 padding-right: 40px;
-z-index: 100;
-}
-input{
-    size: 6;
+
 }
 }
 
@@ -30,12 +27,17 @@ input{
  
 .search-div{
     width: 100%;
-  margin-top:60px;
-  padding-left: 90%;
-z-index: 100;
+  margin-top:65px;
+  padding-left: 80%;
+
 }
   .data-div{    
     height:450px;
      margin-top:5px;
   }
+}
+
+.search-div input{
+  background: none;
+  border: none;
 }

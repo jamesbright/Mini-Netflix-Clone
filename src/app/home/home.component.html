@@ -1,29 +1,23 @@
 
 <div class="container">
 <div class="pull-right search-div">
-    <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-            <input type="text" #searchBox id="search-box" (input)="search(searchBox.value)" class="form-control" >
-            <button type="submit" id="search-button" class="btn btn-default"><span
-                    class="glyphicon glyphicon-search"></span></button>
-        </div>
-
-    </form>
+            <input type="text"  (keyup)="searchTerm$.next($event.target.value)" class="form-control search-box" placeholder="search">
 </div>
-    <div *ngIf="movies" class="wrapper">
+    <div *ngIf="movies" class="wrapper" else no_result>
   
         <div class="row ">
          
-            <div *ngFor="let movie of movies.results" class="col-sm-3 col-md-3  col-xs-10 col-xs-offset-1 data-div">
+            <div *ngFor="let movie of movies.results | slice:0:11" class="col-sm-3 col-md-3  col-xs-10 col-xs-offset-1 data-div">
                 <a routerLink="/detail/{{movie.id}}">
                     <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="poster" max-width="200px"
                         min-height="150px" class="img img-responsive " />
                     <div class="movie-list-descrip">
-                        <span> released: {{ movie.release_date}} | votes: {{movie.vote_count}}</span>
+                        <span> <span *ngIf="movie.first_air_date">{{movie.first_air_date | date: 'y'}}</span> {{ movie.release_date | date: "y"}} | votes: {{movie.vote_count}}</span>
                     </div>
                 </a>
             </div>
      
         </div>
     </div>
+    <ng-template #no_result>No result found</ng-template>
 </div>

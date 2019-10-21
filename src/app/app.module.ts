@@ -10,7 +10,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { FavMoviesComponent } from './fav-movies/fav-movies.component';
 import { HomeComponent } from './home/home.component';
 import { SimilarMoviesComponent } from './similar-movies/similar-movies.component';
-
+import { StorageServiceModule } from  'ngx-webstorage-service';
+import { LocalStorageService } from './local-storage.service'
 
 @NgModule({
   declarations: [
@@ -25,9 +26,10 @@ import { SimilarMoviesComponent } from './similar-movies/similar-movies.componen
     BrowserModule,
     FormsModule,
    AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    StorageServiceModule
   ],
-  providers: [HttpClientModule],
+  providers: [HttpClientModule, LocalStorageService],
   bootstrap: [AppComponent]
 })
 

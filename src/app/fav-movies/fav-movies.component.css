@@ -1,0 +1,51 @@
+.movie-list-descrip{
+    text-align:center;
+}
+@media only screen and (min-width: 456px) {
+.data-div {
+     margin-top:20px;
+  
+}
+.search-div{
+    width: 100%;
+  margin-top:60px;
+text-align: center;
+padding-left: 40px;
+padding-right: 40px;
+
+}
+}
+
+.form-group{
+    display: flex;
+}
+@media only screen and (min-width: 1024px) {
+ 
+.search-div{
+    width: 100%;
+  margin-top:65px;
+  padding-left: 80%;
+
+}
+  .data-div{    
+    height:450px;
+     margin-top:5px;
+  }
+}
+
+.search-div input{
+  background: none;
+  border: none;
+}
+.red{
+    color:red;
+}
+.wrapper
+{
+    margin-top:20px;
+}
+
+.wrapper .h{
+    text-align: center;
+    color:navajowhite;
+}

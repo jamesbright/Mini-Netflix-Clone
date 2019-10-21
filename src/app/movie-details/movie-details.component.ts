@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MovieService } from '../movie.service';
 import { Location } from '@angular/common';
-import { Router } from '@angular/router';
-import { NgZone } from '@angular/core';
+import { LocalStorageService } from '../local-storage.service'
 
 @Component({
   selector: 'app-movie-details',
@@ -13,38 +12,44 @@ import { NgZone } from '@angular/core';
 export class MovieDetailsComponent implements OnInit {
   public movie;
   public genre;
-  constructor( 
-    public zone: NgZone,private route: ActivatedRoute, private router: Router, 
+  constructor(
+    private route: ActivatedRoute,
     private movieService: MovieService,
-    private location: Location) { }
+    private location: Location,
+    private localStorageService: LocalStorageService) { }
 
-//get a single movie
+  //get a single movie
   getMovie(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.movieService.getMovie(id).subscribe(
       data => {
-        this.movie = data; console.log(data)
-      
+        this.movie = data;
+        console.log(data)
+
       },
       err => console.log(err),
       () => {
-        this.movieService.getMovieList(this.movie.genre[0].id).subscribe
-        (
-          data => {
-            this.genre = data;
-          },
-          err => console.log(err),
-          () => {
-            console.log(`genres gotten ${this.genre}`);
-          }
-        )
+        console.log(`genre is ${this.movie.genres[0].id}`);
+        this.movieService.getMovieList(this.movie.genres[0].id).subscribe
+          (
+            data => {
+              this.genre = data;
+
+              console.log(this.genre);
+            },
+            err => console.log(err),
+            () => {
+              console.log(``);
+            }
+          )
       }
     );
 
-    //this.zone.run(() => { this.router.navigate(['/detail/:id']); });
   }
 
-
+  addToFavourites(event, movieId) {
+    this.localStorageService.storeOnLocalStorage(movieId);
+  }
   goBack(): void {
     this.location.back();
   }
