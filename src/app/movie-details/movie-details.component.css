@@ -28,6 +28,7 @@
 .movie-description{
     color: rgb(243, 233, 233);
     font-size:18px;
+    text-align: justify;
 }
 .movie-interact{
     text-align: center;
