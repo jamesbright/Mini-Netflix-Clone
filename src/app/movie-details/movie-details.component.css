@@ -70,8 +70,6 @@
 .movie-similar{
     height:250px;
 }
-
-
 .centered-title {
   position: absolute;
   top: 20%;
@@ -86,4 +84,11 @@
 
 .movie-list-descrip{
     text-align:center;
+}
+
+.more-details{
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(243, 233, 233);
+
 }

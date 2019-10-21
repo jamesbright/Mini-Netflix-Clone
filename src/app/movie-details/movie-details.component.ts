@@ -12,6 +12,7 @@ import { LocalStorageService } from '../local-storage.service'
 export class MovieDetailsComponent implements OnInit {
   public movie;
   public genre;
+  public showMore : boolean = false;
   constructor(
     private route: ActivatedRoute,
     private movieService: MovieService,
@@ -49,6 +50,10 @@ export class MovieDetailsComponent implements OnInit {
 
   addToFavourites(event, movieId) {
     this.localStorageService.storeOnLocalStorage(movieId);
+  }
+
+moreInfo(event) {
+  this.showMore = true;
   }
   goBack(): void {
     this.location.back();

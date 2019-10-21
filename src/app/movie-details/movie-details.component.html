@@ -18,6 +18,13 @@
                                 class="glyphicon glyphicon-info-sign"></span> More Info</button>
                     </div>
                 </div>
+                <div   *ngIf="showMore" class="more-details">
+                   <p > genre: <span *ngFor="let genre of movie.genres">{{genre.name}} </span>
+                    <p> Languages: <span *ngFor="let lang of movie.spoken_languages">{{lang.name}} </span>
+                        <p>website: <a href="movie.homepage" >{{movie.homepage}} </a></p>
+                        <p>released: <span>{{movie.release_date}} </span></p>
+                        <p>popularity: <span>{{movie.popularity}} </span></p>
+                </div>
             </div>
 
 
