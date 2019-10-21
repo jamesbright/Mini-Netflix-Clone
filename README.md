@@ -1,5 +1,7 @@
 # ALC4.0-ng-mini-netflix
 
+http://mini-flix.netflix.com
+
 > ALC4.0 mini netflix challenge app
 
 downnload or clone https://github.com/jamesbright/ALC4.0-ng-mini-netflix.git
