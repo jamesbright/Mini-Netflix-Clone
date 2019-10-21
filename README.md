@@ -6,7 +6,7 @@ https://mini-flix.netlify.com
 
 downnload or clone https://github.com/jamesbright/ALC4.0-ng-mini-netflix.git
 
-`cd ALC4.0-ng-mini-netflix.git`
+run command `cd ALC4.0-ng-mini-netflix`
 
 #### make sure you have nodejs and angular installed in your machine
 
