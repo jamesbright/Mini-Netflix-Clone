@@ -8,7 +8,7 @@
 
 # Angular App Installation Guide
 
-This guide will walk you through the installation process for setting up and running an Angular app. Please follow the steps below to get started.
+This guide will walk you through the installation process for setting up and running this Angular app. Please follow the steps below to get started.
 
 ## Prerequisites
 
